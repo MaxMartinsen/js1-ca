@@ -1,9 +1,16 @@
+/* CONTAINER */
+
 .container a {
   color: var(--primary-colour) !important;
 }
+
+/* FOOTER */
+
 footer a {
   color: var(--black) !important;
 }
+
+/* ERROR */
 
 .error {
   border: 1px solid var(--primary-colour);
@@ -11,6 +18,8 @@ footer a {
   background: var(--light-grey);
   padding: 1em;
 }
+
+/* BUTTON */
 
 .btn-primary {
   background: var(--primary-colour) !important;
@@ -20,6 +29,12 @@ footer a {
 .container a.btn-primary {
   color: var(--primary-colour) !important;
 }
+.button-next,
+.button-prev {
+  color: var(--grey);
+}
+
+/* LOADER */
 
 .loader {
   height: 100px;

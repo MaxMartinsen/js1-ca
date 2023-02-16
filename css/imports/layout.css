@@ -26,8 +26,15 @@ nav {
 .link {
   margin-left: 20px;
 }
+.control {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  gap: 1rem;
+}
 
-footer {
+.footer-link {
+  margin-top: 10px;
   flex-shrink: 0;
   background-color: var(--primary-colour);
   text-align: center;

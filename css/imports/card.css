@@ -1,3 +1,5 @@
+/* CARD */
+
 .card {
   display: flex;
   flex-direction: column;
@@ -27,6 +29,8 @@
   border-radius: 0 0 1rem 1rem;
 }
 
+/* NAME */
+
 .name {
   font-size: 16px;
   margin-bottom: 0.75rem;
@@ -34,10 +38,21 @@
   font-weight: bold;
 }
 
-.location {
+/* STATUS */
+
+.status {
   font-size: 14px;
   color: var(--grey);
 }
+
+.alive {
+  color: green;
+}
+.dead {
+  color: red;
+}
+
+/* IMAGE */
 
 .image {
   border-radius: 1rem 1rem 0 0;

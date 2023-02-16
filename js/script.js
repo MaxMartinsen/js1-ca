@@ -1,32 +1,41 @@
 const resultsContainer = document.querySelector(".results");
 const loader = document.querySelector(".loader");
-
-const url = "https://rickandmortyapi.com/api/character/";
+const prevBtn = document.querySelector("#prev");
+const nextBtn = document.querySelector("#next");
+let currentPage = 1;
 
 async function fetchCharacters() {
-
   try {
     loader.style.display = "block";
-
+    const url = `https://rickandmortyapi.com/api/character/?page=${currentPage}`;
     setTimeout(async function() {
       const response = await fetch(url);
-      console.log("Response from the API: ", response);
+      console.log("Response: ", response);
       const json = await response.json();
-
-      console.log("JSON data from the API: ", json);
-
+      const jsonInfo = json.info;
+      console.log("Info: ", jsonInfo);
       resultsContainer.innerHTML = "";
-
       const characters = json.results;
-
+      console.log("Array: ", characters);
       characters.forEach(function(character) {
+        let status = "";
+        if (character.status !== "unknown") {
+          status = `<p class="status">Status: ${character.status}</p>`;
+        }
+        if (character.status === "Alive") {
+          status = `<p class="status">Status: <span class="alive">${character.status}</span></p>`;
+        }
+        if (character.status === "Dead") {
+          status = `<p class="status">Status: <span class="dead">${character.status}</span></p>`;
+        }
         resultsContainer.innerHTML += `<a href="details.html?id=${character.id}" class="card">
-                                                <div class="image" style="background-image: url(${character.image});"></div>
-                                                <div class="details">
-                                                <h4 class="name">${character.name}</h4>
-                                                <p class="location">${character.location.name}</p></div></a>`;
+          <div class="image" style="background-image: url(${character.image});"></div>
+          <div class="details">
+            <h4 class="name">${character.name}</h4>
+            ${status}
+          </div>
+        </a>`;
       });
-
       loader.style.display = "none";
     }, 1000);
   } catch (error) {
@@ -36,5 +45,16 @@ async function fetchCharacters() {
   }
 }
 
-fetchCharacters();
+prevBtn.addEventListener("click", function() {
+  if (currentPage > 1) {
+    currentPage--;
+    fetchCharacters();
+  }
+});
 
+nextBtn.addEventListener("click", function() {
+  currentPage++;
+  fetchCharacters();
+});
+
+fetchCharacters();

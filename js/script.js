@@ -23,10 +23,10 @@ async function fetchCharacters() {
           status = `<p class="status">Status: ${character.status}</p>`;
         }
         if (character.status === "Alive") {
-          status = `<p class="status">Status: <span class="alive">${character.status}</span></p>`;
+          status = `<p class="status">Status: <span class="status-alive">${character.status}</span></p>`;
         }
         if (character.status === "Dead") {
-          status = `<p class="status">Status: <span class="dead">${character.status}</span></p>`;
+          status = `<p class="status">Status: <span class="status-dead">${character.status}</span></p>`;
         }
         resultsContainer.innerHTML += `<a href="details.html?id=${character.id}" class="card">
           <div class="image" style="background-image: url(${character.image});"></div>

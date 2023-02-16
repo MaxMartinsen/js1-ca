@@ -45,10 +45,10 @@
   color: var(--grey);
 }
 
-.alive {
+.status-alive {
   color: green;
 }
-.dead {
+.status-dead {
   color: red;
 }
 

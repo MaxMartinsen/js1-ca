@@ -37,6 +37,16 @@ async function fetchCharacters() {
         </a>`;
       });
       loader.style.display = "none";
+      if (currentPage === 1) {
+        prevBtn.style.display = "none";
+      } else {
+        prevBtn.style.display = "block";
+      }
+      if (currentPage === 42) {
+        nextBtn.style.display = "none";
+      } else {
+        nextBtn.style.display = "block";
+      }
     }, 1000);
   } catch (error) {
     console.log("Error:", error);

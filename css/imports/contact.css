@@ -1,0 +1,41 @@
+button {
+  border: none;
+  width: 200px;
+  padding: 1rem;
+  color: var(--primary-colour);
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  opacity: 0.5;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button:enabled {
+  opacity: 1;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  color: var(--black);
+}
+
+.form-error {
+  display: none;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
+.message {
+  background-color: green;
+  color: white;
+  padding: 1em;
+  border-radius: 1rem;
+  display: none;
+}

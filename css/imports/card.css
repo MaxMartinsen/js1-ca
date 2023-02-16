@@ -1,0 +1,47 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  max-width: 300px;
+  margin: 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
+}
+
+.card a.details {
+  margin-top: 0.5em;
+  background-color: var(--grey) !important;
+  color: white !important;
+}
+
+.card a.details:hover {
+  background-color: var(--light-grey) !important;
+  color: var(--grey) !important;
+}
+
+.card div.details {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  background: white;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.name {
+  font-size: 16px;
+  margin-bottom: 0.75rem;
+  color: var(--grey);
+  font-weight: bold;
+}
+
+.location {
+  font-size: 14px;
+  color: var(--grey);
+}
+
+.image {
+  border-radius: 1rem 1rem 0 0;
+  height: 300px;
+  background-size: cover;
+  background-position: center top;
+}

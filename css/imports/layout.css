@@ -1,0 +1,68 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #212121;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+nav {
+  display: flex;
+}
+.link {
+  margin-left: 20px;
+}
+
+footer {
+  flex-shrink: 0;
+  background-color: var(--primary-colour);
+  text-align: center;
+  color: var(--footer) !important;
+  font-size: 12px;
+  padding: 1em 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  margin-bottom: 1em;
+  font-size: 1.6em;
+  text-transform: capitalize;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0px auto 0 auto;
+}
+
+.results {
+  margin-top: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.primary {
+  color: var(--primary-colour);
+}
+
+.bg-dark {
+  background-color: var(--grey) !important;
+}

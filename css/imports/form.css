@@ -1,0 +1,91 @@
+.form-inner {
+  padding: 30px;
+}
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #e9eff6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+}
+.form-button {
+  margin-top: 30px;
+  background: #303030;
+  border-bottom: 4px solid #212121;
+  color: white;
+  font-size: 14px;
+}
+.form-inner h3 {
+  margin-top: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #212121;
+  text-align: center;
+}
+.checkbox {
+  display: inline;
+  width: none;
+}
+
+form {
+  padding: 2em;
+  background: white;
+  border-radius: 1rem;
+}
+
+input {
+  margin-top: 2px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  opacity: 0.5;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button:enabled {
+  opacity: 1;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+.form-error {
+  display: none;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+.input-checkbox.error + .label-checkbox {
+  color: red;
+}
+
+.message {
+  background-color: rgb(32, 122, 32);
+  color: white;
+  padding: 1em;
+  border-radius: 0.2rem;
+  display: none;
+  text-align: center;
+  font-size: 16px;
+}

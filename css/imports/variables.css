@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Exo+2:700i|Open+Sans:400,400i,600,700&display=swap");
+:root {
+  --primary-colour: #ffffff;
+  --grey: #242424;
+  --light-grey: #d8d7d7;
+  --footer: #545454;
+  --error: #b50404;
+  --black: black;
+}

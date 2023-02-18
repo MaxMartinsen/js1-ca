@@ -12,6 +12,13 @@ const successMessage = document.querySelector("#successMessage");
 const inputCheckbox = document.querySelector("#checkbox");
 const loader = document.querySelector(".loader");
 const formContent = document.querySelector(".form")
+const backLink = document.querySelector("#back");
+
+backLink.onclick = () => {
+  history.back();
+};
+
+console.log("You visited this page from:", document.referrer);
 
 loader.style.display = "block";
 setTimeout(() => {

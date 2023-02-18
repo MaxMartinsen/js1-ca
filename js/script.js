@@ -3,7 +3,13 @@ const loader = document.querySelector(".loader");
 const prevBtn = document.querySelector("#prev");
 const nextBtn = document.querySelector("#next");
 
-let currentPage = 1;
+//let currentPage = 1;
+
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const page = params.get("page");
+
+let currentPage = page ? parseInt(page) : 1;
 
 async function fetchCharacters() {
   try {
@@ -66,6 +72,8 @@ prevBtn.addEventListener("click", function() {
       setTimeout(async function() {
         await fetchCharacters();
         loader.style.display = "none";
+        const url = `?page=${currentPage}`;
+        history.pushState({ page: currentPage }, "", url);
       }, 900); 
     } catch (error) {
       console.log("Error:", error);

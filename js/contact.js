@@ -19,14 +19,14 @@ setTimeout(() => {
   loader.style.display = "none";
 }, 1000);
 
-form.addEventListener("submit", handleSubmit);
-firstName.addEventListener("blur", handleFieldBlur);
-subject.addEventListener("blur", handleFieldBlur);
-email.addEventListener("blur", handleFieldBlur);
-address.addEventListener("blur", handleFieldBlur);
-inputCheckbox.addEventListener("change", handleCheckboxChange);
+form.addEventListener("submit", validationSubmit);
+firstName.addEventListener("blur", validationForm);
+subject.addEventListener("blur", validationForm);
+email.addEventListener("blur", validationForm);
+address.addEventListener("blur", validationForm);
+inputCheckbox.addEventListener("change", validationCheckboxChange);
 
-function handleFieldBlur(event) {
+function validationForm(event) {
   const { id, value } = event.target;
   const errorEl = document.querySelector(`#${id}Error`);
 
@@ -39,7 +39,7 @@ function handleFieldBlur(event) {
   }
 }
 
-function handleCheckboxChange(event) {
+function validationCheckboxChange(event) {
   if (!event.target.checked) {
     console.log("Checkbox not checked");
     inputCheckbox.classList.add("error");
@@ -50,7 +50,7 @@ function handleCheckboxChange(event) {
   }
 }
 
-function handleSubmit(event) {
+function validationSubmit(event) {
   event.preventDefault();
 
   const firstNameValue = firstName.value.trim();
@@ -79,7 +79,7 @@ function handleSubmit(event) {
     emailError.style.display = "none";
   }
 
-  if (addressValue.length < 20) {
+  if (addressValue.length < 25) {
     addressError.style.display = "block";
     submitButton.disabled = true;
   } else {

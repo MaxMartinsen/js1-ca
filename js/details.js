@@ -1,5 +1,8 @@
 const detailsContainer = document.querySelector(".details");
 const loader = document.querySelector(".loader");
+const backLink = document.querySelector(".link");
+
+
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);

@@ -5,6 +5,11 @@ form {
   background: white;
   border-radius: 1rem;
 }
+
+.form {
+  display: none;
+}
+
 .form-inner {
   padding: 30px;
 }
@@ -85,6 +90,10 @@ label {
 }
 .input-checkbox.error + .label-checkbox {
   color: red;
+}
+
+.adress-error-item {
+  font-size: 0.8rem;
 }
 
 /* MESSAGE */

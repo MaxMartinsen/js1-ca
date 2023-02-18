@@ -2,6 +2,7 @@ const resultsContainer = document.querySelector(".results");
 const loader = document.querySelector(".loader");
 const prevBtn = document.querySelector("#prev");
 const nextBtn = document.querySelector("#next");
+
 let currentPage = 1;
 
 async function fetchCharacters() {
@@ -47,7 +48,7 @@ async function fetchCharacters() {
       } else {
         nextBtn.style.display = "block";
       }
-    }, 1000);
+    }, 900);
   } catch (error) {
     console.log("Error:", error);
     resultsContainer.innerHTML = message("error", error);
@@ -58,13 +59,37 @@ async function fetchCharacters() {
 prevBtn.addEventListener("click", function() {
   if (currentPage > 1) {
     currentPage--;
-    fetchCharacters();
+    try {
+      window.scrollTo(0, 0);
+      loader.style.display = "block";
+      resultsContainer.innerHTML = "";
+      setTimeout(async function() {
+        await fetchCharacters();
+        loader.style.display = "none";
+      }, 900); 
+    } catch (error) {
+      console.log("Error:", error);
+      resultsContainer.innerHTML = message("error", error);
+      loader.style.display = "none";
+    }
   }
 });
 
 nextBtn.addEventListener("click", function() {
   currentPage++;
-  fetchCharacters();
+  try {
+    window.scrollTo(0, 0);
+    loader.style.display = "block";
+    resultsContainer.innerHTML = "";
+    setTimeout(async function() {
+      await fetchCharacters();
+      loader.style.display = "none";
+    }, 900);
+  } catch (error) {
+    console.log("Error:", error);
+    resultsContainer.innerHTML = message("error", error);
+    loader.style.display = "none";
+  }
 });
 
 fetchCharacters();

@@ -1,6 +1,13 @@
 const detailsContainer = document.querySelector(".details");
 const loader = document.querySelector(".loader");
-const backLink = document.querySelector(".link");
+const backLink = document.querySelector("#back");
+
+backLink.onclick = () => {
+  history.back();
+};
+
+console.log("You visited this page from:", document.referrer);
+
 
 
 

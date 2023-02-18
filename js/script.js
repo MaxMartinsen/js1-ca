@@ -84,6 +84,8 @@ nextBtn.addEventListener("click", function() {
     setTimeout(async function() {
       await fetchCharacters();
       loader.style.display = "none";
+      const url = `?page=${currentPage}`;
+      history.pushState({ page: currentPage }, "", url);
     }, 900);
   } catch (error) {
     console.log("Error:", error);
@@ -91,5 +93,6 @@ nextBtn.addEventListener("click", function() {
     loader.style.display = "none";
   }
 });
+
 
 fetchCharacters();

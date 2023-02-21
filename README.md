@@ -15,3 +15,9 @@ This is a site that provides a list of characters from the popular animated seri
 - HTML
 - CSS
 - Rick and Morty API
+
+### How to use
+
+- Open the index.html file in a web browser.
+- Click on a character card to see more details about that character.
+- The list of characters will be displayed, and you can navigate through it using the "prev" and "next" buttons.

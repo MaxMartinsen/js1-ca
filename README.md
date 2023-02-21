@@ -30,7 +30,7 @@ This is a site that provides a list of characters from the popular animated seri
 
 ## Features contact.html
 
-- Users can fill out the form with their first name, subject, email, and message.
+- Users can fill out the form with their first name, subject, email, and address.
 - The form includes validation to ensure that all required fields are filled out and that the email address is in a valid format.
 - The form includes a checkbox that users must check to confirm that they agree to the terms and conditions.
 - When the user submits the form, a success message is displayed, and the form can be submitted to the site owner.

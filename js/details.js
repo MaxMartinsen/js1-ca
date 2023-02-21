@@ -6,11 +6,6 @@ backLink.onclick = () => {
   history.back();
 };
 
-console.log("You visited this page from:", document.referrer);
-
-
-
-
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
@@ -24,8 +19,7 @@ async function fetchCharacters() {
     setTimeout(async function() {
       const response = await fetch(url);
       const detail = await response.json();
-
-      console.log(detail);
+      
       createHtml(detail);
 
       loader.style.display = "none";

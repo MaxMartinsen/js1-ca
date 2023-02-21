@@ -3,7 +3,6 @@ const loader = document.querySelector(".loader");
 const prevBtn = document.querySelector("#prev");
 const nextBtn = document.querySelector("#next");
 
-//let currentPage = 1;
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -17,13 +16,10 @@ async function fetchCharacters() {
     const url = `https://rickandmortyapi.com/api/character/?page=${currentPage}`;
     setTimeout(async function() {
       const response = await fetch(url);
-      console.log("Response: ", response);
       const json = await response.json();
       const jsonInfo = json.info;
-      console.log("Info: ", jsonInfo);
       resultsContainer.innerHTML = "";
       const characters = json.results;
-      console.log("Array: ", characters);
       characters.forEach(function(character) {
         let status = "";
         if (character.status !== "unknown") {

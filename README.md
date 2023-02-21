@@ -28,7 +28,14 @@ This is a site that provides a list of characters from the popular animated seri
 - This is a simple contact form that allows users to send a message to the site owner.
 - The form includes fields for first name, subject, email, and address.
 
-### How to use
+## Features contact.html
+
+- Users can fill out the form with their first name, subject, email, and message.
+- The form includes validation to ensure that all required fields are filled out and that the email address is in a valid format.
+- The form includes a checkbox that users must check to confirm that they agree to the terms and conditions.
+- When the user submits the form, a success message is displayed, and the form can be submitted to the site owner.
+
+## How to use
 
 - Open the index.html file in a web browser.
 - Click on a character card to see more details about that character.
